@@ -76,9 +76,6 @@ const identities=Object.entries(identityGroups).map(([name,assets])=>({name,asse
 $('#identityCount').textContent=`${identities.length} UNIQUE IDENTITY PROJECTS · ${graphics.length} SOURCE IMAGES`;
 $('#identityGrid').innerHTML=identities.map((g,i)=>`<button class="identityCard tilt" type="button" data-open="identity" data-id="${i}" aria-label="View ${esc(g.name)} identity"><div class="identityArt"><img loading="lazy" src="${esc(g.assets[0].file)}" alt="${esc(g.name)} identity"></div><div class="identityInfo">${esc(g.name)}<small>${g.assets.length} VIEW${g.assets.length>1?'S':''} ↗</small></div></button>`).join('');
 $('#printGrid').innerHTML=printablePreview.map(x=>`<article class="printCard tilt" role="button" tabindex="0" data-open="print" data-id="${esc(x.id)}"><img src="${esc(x.file)}" loading="lazy" alt="${esc(pretty(x.name))}"><div class="printName">${esc(pretty(x.name))} ↗</div></article>`).join('');
-// 26 Instagram items are source references only. They are not repeated as gallery cards.
-$('#sourceGrid').innerHTML=data.instagram.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer"><strong>${esc(x.title)} ↗</strong><span>${esc(x.id)} · ${esc(x.type)}</span></a>`).join('');
-$('#toggleSources').addEventListener('click',()=>{const el=$('#sourceGrid');el.hidden=!el.hidden;$('#toggleSources').setAttribute('aria-expanded',String(!el.hidden));$('#toggleSources').innerHTML=el.hidden?'VIEW INSTAGRAM REFERENCES <span>↗</span>':'HIDE INSTAGRAM REFERENCES <span>↑</span>'});
 const viewer=$('#viewer'),viewerMedia=$('#viewerMedia');
 let activeVideo=null;
 let qualitySelection='Auto';

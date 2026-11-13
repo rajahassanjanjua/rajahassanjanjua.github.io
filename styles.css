@@ -27,3 +27,4 @@
 .hero.section{height:auto;max-height:none;min-height:max(830px,100svh);row-gap:2rem}.heroTitleWrap,.heroBottom{flex-shrink:0}@media(max-width:700px){.hero.section{min-height:max(760px,95svh)}}
 
 @media(max-width:850px){.sourcesCard .outlineButton{margin-top:44px}}@media(max-width:560px){.sourcesCard .outlineButton{margin-top:44px}}
+.sourcesActions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.sourcesActions .outlineButton{margin:0}@media(max-width:850px){.sourcesActions{margin-top:32px}}@media(max-width:420px){.sourcesActions{display:grid;grid-template-columns:1fr}.sourcesActions .outlineButton{width:100%;text-align:center}}
